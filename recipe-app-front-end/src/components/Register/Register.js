@@ -34,7 +34,7 @@ class Register extends React.Component {
     })
       .then((response) => response.json())
       .then((user) => {
-        console.log('Received user:', user); 
+        //console.log('Received user:', user); 
         if (user.id) {
           this.props.loadUser(user); 
           this.props.onRouteChange('home'); 
@@ -43,7 +43,7 @@ class Register extends React.Component {
         }
       })
       .catch((err) => {
-        console.error('Registration error:', err);
+        //console.error('Registration error:', err);
         alert('An error occurred. Please try again later.');
       });
   };
