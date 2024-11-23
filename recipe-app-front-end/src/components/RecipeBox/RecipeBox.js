@@ -9,7 +9,7 @@ class RecipeBox extends Component {
       description: '',
       ingredients: '',
       url_photo: '',
-      editingRecipeId: null,  // to track the recipe being edited
+      editingRecipeId: null,  
     };
   }
 
