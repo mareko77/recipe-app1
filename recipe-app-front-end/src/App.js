@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   loadUser = (data) => {
-    console.log('Loading user:', data); // Debugging
+    //console.log('Loading user:', data);
     this.setState({
       user: {
         id: data.id,
@@ -34,7 +34,7 @@ class App extends Component {
   };
 
   onRouteChange = (route) => {
-    console.log('Route changing to:', route); // Debugging
+   // console.log('Route changing to:', route); 
     if (route === 'signout') {
       this.setState(initialState); // Reset state on signout
     } else if (route === 'home') {
