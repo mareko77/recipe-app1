@@ -1,7 +1,7 @@
 const handleRegister = (req, res, db, bcrypt) => {
   const { email, name, password } = req.body;
   if (!email || !name || !password) {
-    return res.status(400).json('Incorrect form submission'); // Ensure all fields are provided
+    return res.status(400).json('Incorrect form submission'); 
   }
 
   const hash = bcrypt.hashSync(password); // Hash the password
@@ -32,12 +32,12 @@ const handleRegister = (req, res, db, bcrypt) => {
       })
       .then(trx.commit)
       .catch((err) => {
-        console.error('Error during transaction:', err); // Log the error
+        //console.error('Error during transaction:', err); 
         trx.rollback();
         res.status(400).json('Unable to register');
       });
   }).catch((err) => {
-    console.error('Error initiating transaction:', err); // Log the error
+    //console.error('Error initiating transaction:', err); 
     res.status(400).json('Unable to register');
   });
 };
