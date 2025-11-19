@@ -65,10 +65,10 @@ const recipes = require('./controllers/recipes');
 const db = knex({
   client: 'mysql',
   connection: {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'recipes2',
+    host: 'db5019041392.hosting-data.io',
+    user: 'dbu4342742',
+    password: 'x!fPxWT-3iL6YTj',
+    database: 'dbs14984349',
   },
 });
 
